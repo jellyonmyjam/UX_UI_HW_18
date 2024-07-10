@@ -15,7 +15,7 @@ nav {
 }
 
 ul {
-  width: 50%;
+  width: 90%;
   margin-left: auto;
 }
 
@@ -42,15 +42,45 @@ footer ul {
 
 .flexContainer {
   display: flex;
+  flex-direction: row;
 }
 
-div div.flexContainer {
-  width: 33%;
-  margin: auto;
+div.flexContainer div {
+  width: 20%;
+  margin-left: 300px;
   padding: 25px;
 }
 
 .workGrid {
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: auto auto;
+}
+
+div.workGrid div {
+  width: 20%;
+  margin-left: 300px;
+  padding: 100px;
+}
+
+@media only screen and (max-width: 600){
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  div div.flexContainer {
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+  }
+  .workGrid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+  }
+  div.workGrid div {
+    width: 20%;
+    margin-left: 300px;
+    padding: 100px;
+  }
 }
